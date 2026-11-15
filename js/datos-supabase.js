@@ -97,8 +97,9 @@ export async function enviar({ titulo, descripcion, archivos, enlace, categoria 
   const rutas = []
   try {
     for (const archivo of archivos) {
-      const ruta = `${uid}/${crypto.randomUUID()}.webp`
-      const { error } = await cubo.upload(ruta, await encoge(archivo, cfg.ladoImagen), { contentType: 'image/webp', cacheControl: '31536000' })
+      const imagen = await encoge(archivo, cfg.ladoImagen)
+      const ruta = `${uid}/${crypto.randomUUID()}.${imagen.type === 'image/webp' ? 'webp' : 'jpg'}`
+      const { error } = await cubo.upload(ruta, imagen, { contentType: imagen.type, cacheControl: '31536000' })
       if (error) throw new Error(error.message)
       rutas.push(ruta)
     }
