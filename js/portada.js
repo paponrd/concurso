@@ -91,7 +91,12 @@ function pintaFijos() {
       },
       texto: pm.nombre,
     }))))
-  $('#pasos').replaceChildren(...t.pasos.map(p => crea('li', {}, crea('h3', { texto: p.titulo }), crea('p', { texto: p.texto }))))
+  $('#pasos').replaceChildren(...t.pasos.map((p, i) => crea('li', {},
+    crea('h3', { texto: p.titulo }),
+    crea('p', { texto: p.texto }, i === 0 ? [' ', crea('a', { href: '#acceso', texto: t.pasoEnlace })] : null))))
+  $('#acceso-listas').replaceChildren(...t.acceso.grupos.map(g => crea('div', {},
+    crea('h3', { texto: g.titulo }),
+    crea('ul', {}, g.puntos.map(p => crea('li', {}, crea('strong', { texto: p.titulo }), crea('span', { texto: p.texto })))))))
 }
 
 function pintaPestanas() {

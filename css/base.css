@@ -187,6 +187,16 @@ main { display: flex; flex-direction: column; }
 .pasos h3 { font-size: 1.25rem; }
 .pasos p { max-width: 34ch; color: var(--tinta-suave); font-size: 0.9375rem; }
 
+.pasos a { color: var(--tinta); white-space: nowrap; }
+
+.acceso-listas { display: grid; gap: 2.5rem; }
+.acceso-listas h3 { font-size: 1.5rem; color: var(--acento); }
+.acceso-listas ul { display: grid; margin: 0.9rem 0 0; padding: 0; list-style: none; border-top: 1px solid var(--borde); }
+.acceso-listas li { display: grid; gap: 0.2rem; padding: 0.9rem 0; border-bottom: 1px solid var(--borde); }
+.acceso-listas strong { font-size: 1.0625rem; }
+.acceso-listas span { max-width: 48ch; color: var(--tinta-suave); font-size: 0.9375rem; }
+.acceso-pie { display: grid; gap: 0.5rem; margin-top: 2rem; max-width: 64ch; color: var(--tinta-suave); }
+
 .pestanas {
   display: flex; gap: 0.5rem; margin-inline: calc(var(--margen) * -1); padding: 0.25rem var(--margen);
   overflow-x: auto; scroll-snap-type: x proximity; scrollbar-width: none;
@@ -362,6 +372,7 @@ body[data-fase="cerrado"] .portada { order: -2; }
   .acciones .boton { flex: 0 1 auto; }
   .premios { grid-template-columns: 1fr 1fr; column-gap: 3rem; }
   .pasos { grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+  .acceso-listas { grid-template-columns: 1fr 1fr; gap: 3.5rem; }
   .detalle-caja { grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); }
   .detalle-texto { padding: 3.5rem 1.75rem 2rem 0.75rem; }
   .fila { grid-template-columns: 132px 1fr; }

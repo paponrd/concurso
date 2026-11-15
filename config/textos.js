@@ -40,6 +40,34 @@ export const textos = {
     { titulo: 'Vota y sigue la final', texto: 'Los cuatro más votados de cada premio pasan a la final. De ahí salen los tres ganadores.' },
   ],
 
+  pasoEnlace: 'Qué recibimos de tu Discord',
+
+  acceso: {
+    titulo: 'Entrar con Discord no nos da tu cuenta',
+    entrada: 'La contraseña la escribes en discord.com, nunca aquí: fíjate en la dirección de la página cuando te la pida. Antes de aceptar, Discord te enseña la lista exacta de lo que compartes.',
+    grupos: [
+      {
+        titulo: 'Lo que recibimos',
+        puntos: [
+          { titulo: 'Tu nombre y tu avatar', texto: 'Salen junto a las propuestas que subas.' },
+          { titulo: 'Tu número de usuario', texto: 'Con él contamos un solo voto por persona en cada premio.' },
+          { titulo: 'Tu correo', texto: 'Discord lo incluye en el inicio de sesión. No sale en la web y no te escribimos.' },
+        ],
+      },
+      {
+        titulo: 'Lo que no podemos hacer',
+        puntos: [
+          { titulo: 'Ver tu contraseña', texto: 'El inicio de sesión ocurre en la página de Discord, no en la nuestra.' },
+          { titulo: 'Leer o enviar mensajes', texto: 'Discord lo avisa en la pantalla de permisos: la aplicación no puede leer tus mensajes ni escribir en tu nombre.' },
+          { titulo: 'Ver tus servidores o tus amigos', texto: 'No pedimos ese permiso.' },
+          { titulo: 'Usar tu cuenta', texto: 'Recibimos esos tres datos, no una forma de entrar en tu Discord.' },
+        ],
+      },
+    ],
+    salida: 'Puedes quitarle el acceso a esta web cuando quieras. En Discord: Ajustes de usuario, Aplicaciones autorizadas, Desautorizar.',
+    votos: 'La web no enseña a quién votas, solo el total de votos de cada propuesta.',
+  },
+
   galeria: {
     subida: 'Propuestas publicadas',
     votacion: 'Vota una propuesta por premio',
