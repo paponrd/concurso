@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap");
+
+:root {
+  --fondo: #0e1733;
+  --tinta: #f4efe1;
+  --acento: #ffd23f;
+  --sobre-acento: #0e1733;
+  --esquema: dark;
+
+  --bloque-1: #ffd23f;
+  --bloque-2: #5b8cff;
+  --bloque-3: #ff7a52;
+  --bloque-4: #3fd39a;
+  --bloque-5: #ff8fc6;
+  --bloque-6: #f4efe1;
+  --sobre-bloque: #0e1733;
+
+  --letra-titulares: "Archivo", "Arial Narrow", sans-serif;
+  --letra-texto: "Archivo", system-ui, sans-serif;
+  --ancho-titulares: 62%;
+  --peso-titulares: 900;
+
+  --radio: 8px;
+}

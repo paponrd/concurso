@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sube tu propuesta · Concurso de ideas</title>
+<meta name="description" content="Envía tu idea para el remake con un título, una explicación y hasta cuatro imágenes.">
+<meta property="og:title" content="Sube tu propuesta al concurso de ideas">
+<meta property="og:image" content="img/compartir.png">
+<meta name="theme-color" content="#101a36">
+<link rel="icon" href="img/logo.svg">
+<link rel="stylesheet" href="config/tema.css">
+<link rel="stylesheet" href="css/base.css">
+<script type="module" src="js/subir.js"></script>
+</head>
+<body>
+<a class="salto" href="#contenido">Saltar al contenido</a>
+<div class="demo" id="demo" hidden></div>
+
+<header class="cabecera">
+  <a class="marca" href="index.html"><img src="img/logo.svg" alt="" width="36" height="36"><span data-t="sitio">Concurso de ideas</span></a>
+  <nav class="menu" aria-label="Secciones">
+    <a href="index.html#propuestas" data-t="navPropuestas">Propuestas</a>
+    <a href="index.html#premios" data-t="navPremios">Premios</a>
+  </nav>
+  <div class="sesion" id="sesion"></div>
+</header>
+
+<main class="hoja" id="contenido">
+  <h1 data-t="subir.titulo">Sube tu propuesta</h1>
+  <p class="entrada" id="entrada" data-t="subir.entrada">Cuenta tu idea como se la contarías a alguien del servidor. La revisamos antes de publicarla.</p>
+
+  <form class="formulario" id="formulario" novalidate hidden>
+    <div class="campo">
+      <label for="titulo" data-t="subir.campoTitulo">Título</label>
+      <span class="ayuda" id="ayuda-titulo" data-t="subir.ayudaTitulo"></span>
+      <input type="text" id="titulo" maxlength="80" autocomplete="off" aria-describedby="ayuda-titulo error-titulo">
+      <span class="error" id="error-titulo" role="alert"></span>
+    </div>
+
+    <div class="campo">
+      <label for="descripcion" data-t="subir.campoDescripcion">Explicación</label>
+      <span class="ayuda" id="ayuda-descripcion" data-t="subir.ayudaDescripcion"></span>
+      <textarea id="descripcion" maxlength="1200" aria-describedby="ayuda-descripcion error-descripcion"></textarea>
+      <span class="error" id="error-descripcion" role="alert"></span>
+    </div>
+
+    <div class="campo" id="campo-categoria" hidden>
+      <label for="categoria" data-t="subir.campoCategoria">Premio en el que compite</label>
+      <select id="categoria"></select>
+    </div>
+
+    <div class="campo">
+      <label for="imagenes" data-t="subir.campoImagenes">Imágenes</label>
+      <span class="ayuda" id="ayuda-imagenes"></span>
+      <div class="elige">
+        <input type="file" id="imagenes" accept="image/png,image/jpeg,image/webp" multiple aria-describedby="ayuda-imagenes error-imagenes">
+        <span class="boton suave" aria-hidden="true" data-t="subir.elegir">Elegir imágenes</span>
+      </div>
+      <div class="previas" id="previas"></div>
+      <span class="error" id="error-imagenes" role="alert"></span>
+    </div>
+
+    <div class="campo">
+      <label for="enlace" data-t="subir.campoEnlace">Enlace (opcional)</label>
+      <span class="ayuda" id="ayuda-enlace" data-t="subir.ayudaEnlace"></span>
+      <input type="url" id="enlace" placeholder="https://" inputmode="url" aria-describedby="ayuda-enlace error-enlace">
+      <span class="error" id="error-enlace" role="alert"></span>
+    </div>
+
+    <button class="boton" type="submit" id="enviar" data-t="subir.enviar">Enviar propuesta</button>
+  </form>
+
+  <section id="mias" hidden>
+    <h2 data-t="subir.mias">Tus propuestas</h2>
+    <ul class="lista" id="lista-mias"></ul>
+  </section>
+</main>
+
+<footer class="pie">
+  <p data-t="pie">Hecho por la comunidad, para el remake.</p>
+  <a id="discord" href="#" hidden data-t="pieDiscord">Ir al servidor de Discord</a>
+</footer>
+<noscript><p class="hoja">Esta página necesita JavaScript para enviar tu propuesta.</p></noscript>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Administración · Concurso de ideas</title>
+<meta name="description" content="Panel de los organizadores del concurso de ideas.">
+<meta property="og:image" content="img/compartir.png">
+<meta name="theme-color" content="#101a36">
+<link rel="icon" href="img/logo.svg">
+<link rel="stylesheet" href="config/tema.css">
+<link rel="stylesheet" href="css/base.css">
+<script type="module" src="js/admin.js"></script>
+</head>
+<body>
+<a class="salto" href="#contenido">Saltar al contenido</a>
+<div class="demo" id="demo" hidden></div>
+
+<header class="cabecera">
+  <a class="marca" href="index.html"><img src="img/logo.svg" alt="" width="36" height="36"><span data-t="sitio">Concurso de ideas</span></a>
+  <nav class="menu" aria-label="Secciones">
+    <a href="index.html#propuestas" data-t="navPropuestas">Propuestas</a>
+  </nav>
+  <div class="sesion" id="sesion"></div>
+</header>
+
+<main class="hoja ancha" id="contenido">
+  <h1 data-t="panel.titulo">Administración</h1>
+  <p class="entrada" id="sin-permiso" hidden data-t="panel.sinPermiso"></p>
+
+  <div id="panel" hidden>
+    <section>
+      <h2 data-t="panel.etapa">Etapa del concurso</h2>
+      <div class="fases" id="fases"></div>
+    </section>
+
+    <section>
+      <h2 id="titulo-pendientes"></h2>
+      <ul class="lista" id="pendientes"></ul>
+    </section>
+
+    <section>
+      <h2 id="titulo-todas"></h2>
+      <p style="margin-top:1rem"><button class="boton chico suave" type="button" id="descargar" data-t="panel.descargar">Descargar resultados</button></p>
+      <ul class="lista" id="todas"></ul>
+    </section>
+  </div>
+</main>
+<noscript><p class="hoja">Esta página necesita JavaScript.</p></noscript>
+</body>
+</html>
