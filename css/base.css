@@ -1,6 +1,7 @@
 :root {
-  --superficie: color-mix(in oklch, var(--fondo) 90%, var(--tinta));
-  --superficie-2: color-mix(in oklch, var(--fondo) 80%, var(--tinta));
+  --superficie-2: var(--gris, color-mix(in oklch, var(--fondo) 80%, var(--tinta)));
+  --superficie: color-mix(in oklch, var(--fondo) 50%, var(--superficie-2));
+  --rombo: color-mix(in oklch, var(--acento) 15%, transparent);
   --tinta-suave: color-mix(in oklch, var(--tinta) 72%, var(--fondo));
   --borde: color-mix(in oklch, var(--tinta) 16%, transparent);
   --borde-hoja: clamp(1rem, 4vw, 2.5rem);
@@ -72,7 +73,7 @@ h3 { font-size: 1.375rem; line-height: 1.05; }
   font-family: var(--letra-titulares); font-stretch: var(--ancho-titulares); font-weight: var(--peso-titulares);
   font-size: 1.25rem; text-transform: uppercase; text-decoration: none; white-space: nowrap;
 }
-.marca img { width: 36px; height: 36px; }
+.marca img { width: 40px; height: 40px; }
 .marca span { display: none; }
 .menu { display: none; gap: 1.5rem; margin-left: auto; }
 .menu a { display: inline-flex; align-items: center; min-height: 44px; text-decoration: none; font-weight: 500; color: var(--tinta-suave); transition: color 160ms ease; }
@@ -99,8 +100,17 @@ h3 { font-size: 1.375rem; line-height: 1.05; }
 
 main { display: flex; flex-direction: column; }
 
-.portada { padding: clamp(2.5rem, 7vw, 5rem) var(--margen) clamp(2rem, 5vw, 3.5rem); }
-.portada h1 { font-size: clamp(3rem, 11.5vw, 9.5rem); line-height: 0.86; letter-spacing: -0.015em; }
+.portada { position: relative; isolation: isolate; padding: clamp(2rem, 5vw, 3.5rem) var(--margen) clamp(2rem, 5vw, 3.5rem); }
+.portada::before {
+  content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background:
+    repeating-linear-gradient(62deg, transparent 0 54px, var(--rombo) 54px 55px),
+    repeating-linear-gradient(-62deg, transparent 0 54px, var(--rombo) 54px 55px);
+  -webkit-mask-image: radial-gradient(115% 95% at 100% 0%, #000 8%, transparent 64%);
+  mask-image: radial-gradient(115% 95% at 100% 0%, #000 8%, transparent 64%);
+}
+.sello { width: clamp(11.5rem, 30vw, 23rem); height: auto; margin: 0 0 clamp(1rem, 2.4vw, 1.75rem) -0.5rem; }
+.portada h1 { font-size: clamp(2.75rem, 10.4vw, 8.25rem); line-height: 0.86; letter-spacing: -0.015em; }
 .renglon { display: block; overflow: hidden; padding-block: 0.07em; margin-block: -0.07em; }
 .renglon > span { display: block; }
 .portada-pie { display: grid; gap: 2rem; margin-top: clamp(1.5rem, 4vw, 2.75rem); }
@@ -294,8 +304,9 @@ body[data-fase="cerrado"] .portada { order: -2; }
 @keyframes asoma { from { transform: translateY(14px); opacity: 0; } }
 
 @media (prefers-reduced-motion: no-preference) {
-  .renglon > span { animation: sube 950ms var(--expo) both; }
-  .renglon + .renglon > span { animation-delay: 90ms; }
+  .sello { animation: asoma 800ms var(--expo) both; }
+  .renglon > span { animation: sube 950ms var(--expo) 120ms both; }
+  .renglon + .renglon > span { animation-delay: 210ms; }
   .portada-pie { animation: asoma 700ms var(--expo) 320ms both; }
   .etapas li { animation: asoma 600ms var(--expo) both; animation-delay: calc(480ms + var(--i, 0) * 70ms); }
 }

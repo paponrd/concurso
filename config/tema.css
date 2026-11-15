@@ -1,19 +1,20 @@
 @import url("https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap");
 
 :root {
-  --fondo: #0e1733;
-  --tinta: #f4efe1;
-  --acento: #ffd23f;
-  --sobre-acento: #0e1733;
+  --fondo: #030303;
+  --tinta: #fbede6;
+  --acento: #ffdb89;
+  --sobre-acento: #030303;
+  --gris: #2c2c2e;
   --esquema: dark;
 
-  --bloque-1: #ffd23f;
-  --bloque-2: #5b8cff;
-  --bloque-3: #ff7a52;
-  --bloque-4: #3fd39a;
-  --bloque-5: #ff8fc6;
-  --bloque-6: #f4efe1;
-  --sobre-bloque: #0e1733;
+  --bloque-1: #ffdb89;
+  --bloque-2: #fbede6;
+  --bloque-3: #c9a55a;
+  --bloque-4: #8a8a8e;
+  --bloque-5: #e8c9b8;
+  --bloque-6: #2c2c2e;
+  --sobre-bloque: #030303;
 
   --letra-titulares: "Archivo", "Arial Narrow", sans-serif;
   --letra-texto: "Archivo", system-ui, sans-serif;
