@@ -30,34 +30,35 @@
 
 <main>
   <section class="portada">
-    <img class="sello" src="img/novera.webp" alt="Novera" width="1153" height="355">
-    <h1>
-      <span class="renglon"><span data-t="titulo1">Concurso de ideas</span></span>
-      <span class="renglon"><span data-t="titulo2">para el remake</span></span>
-    </h1>
-    <div class="portada-pie">
+    <div class="cartel">
       <div>
-        <p class="entrada" data-t="entrada">Propón qué debería tener el juego: una entidad, una mecánica, un modelo o un dibujo. La comunidad vota y las tres mejores de cada premio entran al remake.</p>
-        <div class="acciones" id="acciones"></div>
+        <img class="sello" src="img/novera.webp" alt="Novera" width="1153" height="355">
+        <h1>
+          <span class="renglon"><span data-t="titulo1">Concurso de ideas</span></span>
+          <span class="renglon"><span data-t="titulo2">para el remake</span></span>
+        </h1>
+        <div class="portada-pie">
+          <div>
+            <p class="entrada" data-t="entrada">Propón qué debería tener el juego: una entidad, una mecánica, un modelo o un dibujo. La comunidad vota y las tres mejores de cada premio entran al remake.</p>
+            <div class="acciones" id="acciones"></div>
+          </div>
+          <div class="ahora">
+            <p class="estado" id="estado"></p>
+            <p class="cuenta" id="cuenta"></p>
+            <a class="ultimas" id="ultimas" href="#propuestas" hidden></a>
+          </div>
+        </div>
       </div>
-      <div class="ahora">
-        <p class="estado" id="estado"></p>
-        <p class="cuenta" id="cuenta"></p>
-        <a class="ultimas" id="ultimas" href="#propuestas" hidden></a>
-      </div>
+      <aside class="programa" id="premios" aria-labelledby="premios-titulo">
+        <h2 id="premios-titulo"></h2>
+        <p id="premios-texto"></p>
+        <ul class="premios" id="lista-premios"></ul>
+      </aside>
     </div>
     <ol class="etapas" id="etapas"></ol>
   </section>
 
-  <section class="seccion" id="premios">
-    <div class="titular">
-      <h2 id="premios-titulo"></h2>
-      <p id="premios-texto"></p>
-    </div>
-    <ul class="premios" id="lista-premios"></ul>
-  </section>
-
-  <section class="seccion" id="como">
+  <section class="seccion ruta" id="como">
     <h2 data-t="comoTitulo">Cómo participar</h2>
     <ol class="pasos" id="pasos"></ol>
   </section>
