@@ -303,6 +303,7 @@ main { display: flex; flex-direction: column; }
   padding: 2rem var(--margen) 2.5rem; border-top: 1px solid var(--borde); color: var(--tinta-suave);
 }
 .pie a { display: inline-flex; align-items: center; min-height: 44px; }
+.firma { width: 6.5rem; height: auto; opacity: 0.4; }
 
 body[data-fase="votacion"] #propuestas,
 body[data-fase="final"] #propuestas,

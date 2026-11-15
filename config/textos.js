@@ -60,7 +60,6 @@ export const textos = {
   cerrar: 'Cerrar',
   por: 'por',
 
-  pie: 'Hecho por la comunidad, para el remake.',
   pieDiscord: 'Ir al servidor de Discord',
 
   subir: {
